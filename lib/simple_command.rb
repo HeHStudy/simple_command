@@ -5,8 +5,8 @@ module SimpleCommand
   attr_reader :result
 
   module ClassMethods
-    def call(*args, &block)
-      new(*args).call(&block)
+    def call(*args, **kwargs, &block)
+      new(*args, **kwargs).call(&block)
     end
   end
 
